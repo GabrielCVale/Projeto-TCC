@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" href="../Css/style-login.css"/>  
+<div class="container">
+        <div class="buttonsForm">
+            <div class="btnColor"></div>
+            <button id="btnSignin">Sign in</button>
+            <button id="btnSignup">Sign up</button>
+        </div>
+
+        <form id="signin" method="post">
+            <input type="text" placeholder="Email" id="email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input type="password" placeholder="Password" id="senha" required />
+            <i class="fas fa-lock iPassword"></i>
+            <div class="divCheck">
+                <input type="checkbox" />
+                <span>Remember Password</span>
+            </div>
+        <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Login">Inscreva-se</a>
+        </form>
+
+        <form id="signup">
+            <input type="text" placeholder="Email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input type="password" placeholder="Password" required />
+            <i class="fas fa-lock iPassword"></i>
+            <input type="password" placeholder="Password" required />
+            <i class="fas fa-lock iPassword2"></i>
+            <div class="divCheck">
+                <input type="checkbox" required />
+                <span>Terms</span>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+
+        <form method="post" action="/Home/Validar">
+    <input type="text" id="txtEmail" name="email" placeholder="Email" />
+    <input type="password" id="txtSenha" name="senha" placeholder="Senha" />
+    <button type="submit" class="btn btn-secondary">Inscreva-se</button>
+</form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    var formSignin = document.querySelector('#signin')
+    var formSignup = document.querySelector('#signup')
+    var btnColor = document.querySelector('.btnColor')
+
+    document.querySelector('#btnSignin')
+        .addEventListener('click', () => {
+            formSignin.style.left = "25px"
+            formSignup.style.left = "450px"
+            btnColor.style.left = "0px"
+        })
+
+    document.querySelector('#btnSignup')
+        .addEventListener('click', () => {
+            formSignin.style.left = "-450px"
+            formSignup.style.left = "25px"
+            btnColor.style.left = "110px"
+        })
+
+    function Validar() {
+        debugger;
+        let email = document.getElementById("email").value;
+        let senha = document.getElementById("senha").value;
+
+        $.ajax({
+            type: "POST",
+            url: "/Home/Validar",
+            data: { email: email, senha: senha },
+            success: function (data) {
+                console.log("Success")
+            },
+            error: function (xhr, status, error) {
+                console.log("readyState: " + xhr.readyState);
+                console.log("responseText: " + xhr.responseText);
+                console.log("status: " + xhr.status);
+                console.log("text status: " + status);
+                console.log("error: " + error);
+            }
+        });
+    }
+
+</script>
