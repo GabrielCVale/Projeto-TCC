@@ -9,41 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projeto_TCC
 build_property.RootNamespace = Projeto_TCC
-build_property.ProjectDir = C:\Users\Valeg\OneDrive\Área de Trabalho\Projeto TCC\Projeto TCC\
+build_property.ProjectDir = C:\Users\Valeg\OneDrive\Área de Trabalho\ProjetoTCC\Projeto TCC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Valeg\OneDrive\Área de Trabalho\Projeto TCC\Projeto TCC
+build_property.MSBuildProjectDirectory = C:\Users\Valeg\OneDrive\Área de Trabalho\ProjetoTCC\Projeto TCC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Home/Index.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/CadastroModels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9Nb2RlbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/CadastroModels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9Nb2RlbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/CadastroModels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9Nb2RlbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/CadastroModels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9Nb2RlbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/CadastroModels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9Nb2RlbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Home/Login.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Home/Privacy.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Shared/Error.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/Viagens.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWFnZW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Home/_Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/_ViewImports.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/_ViewStart.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Valeg/OneDrive/Área de Trabalho/Projeto TCC/Projeto TCC/Views/Shared/_Layout.cshtml]
+[C:/Users/Valeg/OneDrive/Área de Trabalho/ProjetoTCC/Projeto TCC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rjtgj0h025

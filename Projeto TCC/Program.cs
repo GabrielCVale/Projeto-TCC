@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Projeto_TCC.Data;
+using Tcc.Data;
+
 namespace Projeto_TCC
 {
     public class Program
@@ -6,16 +10,20 @@ namespace Projeto_TCC
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Configuração da injeção de dependência do MySqlConnectionHelper
+            builder.Services.AddScoped<MySqlConnectionHelper>(provider => new MySqlConnectionHelper(
+                "server=localhost;initial catalog=cadastro;uid=root;")); // Substitua pela sua string de conexão real
+
+            // Adiciona serviços ao contêiner.
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configuração do pipeline de requisição HTTP.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                // O valor padrão HSTS é de 30 dias. Você pode querer alterar isso para cenários de produção, veja https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 

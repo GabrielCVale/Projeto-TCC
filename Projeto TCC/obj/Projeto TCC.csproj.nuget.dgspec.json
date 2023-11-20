@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\Projeto TCC\\Projeto TCC\\Projeto TCC.csproj": {}
+    "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\Projeto TCC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\Projeto TCC\\Projeto TCC\\Projeto TCC.csproj": {
+    "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\Projeto TCC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\Projeto TCC\\Projeto TCC\\Projeto TCC.csproj",
+        "projectUniqueName": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\Projeto TCC.csproj",
         "projectName": "Projeto TCC",
-        "projectPath": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\Projeto TCC\\Projeto TCC\\Projeto TCC.csproj",
+        "projectPath": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\Projeto TCC.csproj",
         "packagesPath": "C:\\Users\\Valeg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\Projeto TCC\\Projeto TCC\\obj\\",
+        "outputPath": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,6 +64,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

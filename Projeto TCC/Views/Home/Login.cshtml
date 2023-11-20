@@ -1,5 +1,108 @@
-﻿<link rel="stylesheet" href="../Css/style-login.css"/>  
-<div class="container">
+﻿<style>
+
+.container0 {
+  background-color: rgb(0, 0, 0);
+  padding: 6px;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 40px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 rgb(255, 255, 255);
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 108px;
+  height: 100%;
+  background: linear-gradient(to right, #e2bd45, rgba(255, 153, 0, 0.849));
+  border-radius: 30px;
+  transition: .3s;
+  color: aliceblue;
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 10px 35px;
+  outline: none;
+  width: 100%;
+  border-style: solid;
+}
+
+button[type="submit"] {
+  background: rgb(255, 196, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+}
+
+#signin {
+  left: 25px;
+}
+
+#signup {
+  left: 450px;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+.iEmail {
+  top: 40px;
+}
+
+.iPassword {
+  top: 114px;
+}
+
+.iPassword2 {
+  top: 190px;
+}
+</style>
+<div class="container0">
         <div class="buttonsForm">
             <div class="btnColor"></div>
             <button id="btnSignin">Sign in</button>
@@ -16,20 +119,6 @@
                 <span>Remember Password</span>
             </div>
         <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Login">Inscreva-se</a>
-        </form>
-
-        <form id="signup">
-            <input type="text" placeholder="Email" required />
-            <i class="fas fa-envelope iEmail"></i>
-            <input type="password" placeholder="Password" required />
-            <i class="fas fa-lock iPassword"></i>
-            <input type="password" placeholder="Password" required />
-            <i class="fas fa-lock iPassword2"></i>
-            <div class="divCheck">
-                <input type="checkbox" required />
-                <span>Terms</span>
-            </div>
-            <button type="submit">Sign up</button>
         </form>
 
         <form method="post" action="/Home/Validar">

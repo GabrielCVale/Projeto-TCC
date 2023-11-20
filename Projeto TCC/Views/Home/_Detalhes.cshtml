@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Projeto_TCC.Models.CadastroModel>
+
+@foreach(var item in Model){
+<div>
+    <h4>@Html.Raw(item.nomeViagem)</h4>
+        <p>Horário: @Html.Raw(item.Hora)</p>
+        <p>Data @Html.Raw(item.data.Substring(6,2))/@Html.Raw(item.data.Substring(4,2))/@Html.Raw(item.data.Substring(0,4))</p>
+        <p>Imagem: <img src="@Html.Raw(item.Imagem)" class="img-fluid max-width-100" alt="Imagem da Viagem" /></p>
+    <p>Valor: R$ @Html.Raw(item.valor.ToString("0.00"))</p>
+
+</div>
+}

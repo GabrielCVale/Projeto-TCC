@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Projeto_TCC.Models.CadastroModel>
+
+@if()
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-4" style="margin-bottom:1%;" onclick="Card(@item.Id)">
+            <a href="#" onclick="Card(@item.Id)">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg text-decoration: none"
+                 style="background-image: url('@Html.Raw(item.Imagem)'); background-size: cover;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">@Html.Raw(item.nomeViagem)</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Horario @Html.Raw(item.Hora)</small>
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Data @Html.Raw(item.data.Substring(6,2))/@Html.Raw(item.data.Substring(4,2))/@Html.Raw(item.data.Substring(0,4))</small>
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill" />
+                                </svg>
+                                <small>Valor R$@Html.Raw(item.valor)</small>
+                                <input style="display: none;" class="hidden" id="viagem" value="@item.nomeViagem" />
+                                <input style="display: none;"  class="hidden" id="Contato" value="@item.contato" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Detalhes da Viagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="detalhes"></div>
+                <button id="btnWhatsapp" class="btn btn-primary">Entrar em Contato</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function Card(id) {
+        debugger;
+
+        $.ajax({
+            type: "GET",
+            url: "/Home/Card",
+            data: { id: id },
+            success: function (data) {
+                debugger;
+                $(".detalhes").html(data);
+                $("#ExemploModalCentralizado").modal("show");
+
+                // Obter os valores de viagem e contato
+                var viagem = $("#viagem").val();
+                var contato = $("#Contato").val();
+
+                // Construir a mensagem com os valores
+                var mensagem = encodeURIComponent("Olá, me interessei pela viagem para " + viagem + " que você postou na ExcursOn, poderia me enviar mais informações e fotos?");
+
+                // Configurar o link do botão do WhatsApp
+                $("#btnWhatsapp").attr("onclick", "window.open('https://wa.me/" + contato + "?text=" + mensagem + "')");
+            },
+            error: function (xhr, status, error) {
+                console.log("readyState: " + xhr.readyState);
+                console.log("responseText: " + xhr.responseText);
+                console.log("status: " + xhr.status);
+                console.log("text status: " + status);
+                console.log("error: " + error);
+            }
+        });
+    }
+</script>
