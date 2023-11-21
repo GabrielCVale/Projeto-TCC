@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WK71SJQ0axQTaSKXmKBbdGnQ5wnkc906tdJc+vZm/OU=",
+  "Hash": "BaM8aliDW9R+qE17XqyHuRII+Hc2o62/zLiuDvZz7eE=",
   "Source": "Projeto TCC",
   "BasePath": "_content/Projeto TCC",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\wwwroot\\css\\style-login.css",
+      "SourceId": "Projeto TCC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\wwwroot\\",
+      "BasePath": "_content/Projeto TCC",
+      "RelativePath": "css/style-login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style-login.css"
     },
     {
       "Identity": "C:\\Users\\Valeg\\OneDrive\\Área de Trabalho\\ProjetoTCC\\Projeto TCC\\wwwroot\\favicon.ico",

@@ -58,17 +58,32 @@ namespace Projeto_TCC.Controllers
         }
 
         [HttpPost]
-        [Route("Home/Validar")]
-        public ActionResult Validar(string email, string senha)
+        [Route("Home/Validacao")]
+        public ActionResult Validacao(string Email, string Senha)
         {
+            var Resultado = _mySqlConnectionHelper.Login(Email, Senha);
 
-            if (email == "a" && senha == "a")
+            if (Resultado)
             {
                 return RedirectToAction("Index");
             }
             else
             {
                 return RedirectToAction("Login");
+            }
+        }
+
+        public ActionResult Cadastrar(string Nome, string DataNacimento, string Email, string Senha,string CPF, string RG, string Sexo, string Telefone, string Endereco, string Bairro, string Cidade, string EstadoCivil)
+        {
+            var Resultado = _mySqlConnectionHelper.Cadastro(Nome, DataNacimento, Email, Senha, CPF, RG, Sexo, Telefone, Endereco, Bairro, Cidade, EstadoCivil);
+
+            if (Resultado)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Login");
             }
         }
 

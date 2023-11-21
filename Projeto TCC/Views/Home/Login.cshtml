@@ -1,172 +1,47 @@
-﻿<style>
+﻿
+<html lang="pt-br">
+<head>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/style-login.css" />
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" class="container-form" action="/Home/Validacao">
 
-.container0 {
-  background-color: rgb(0, 0, 0);
-  padding: 6px;
-  width: 350px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgb(0, 0, 0);
-}
+                    <!-- Text input -->
+                    <div class="form-group col-md-20">
+                        <label class="control-label" for="user">Email</label>
+                        <i class="fas fa-envelope"></i>
+                        <input id="email" name="Email" type="text" placeholder=" " class="form-control" required="">
+                    </div>
 
-form {
-  position: absolute;
-  margin-top: 80px;
-  transition: .5s;
-  width: 300px;
-  height: 400px;
-}
+                    <!-- Password input -->
+                    <div class="form-group col-md-20">
+                        <label class="control-label" for="password">Senha</label>
+                        <i class="fas fa-lock"></i>
+                        <input id="password" name="Senha" type="password" placeholder="" class="form-control" required="">
+                    </div>
+                    <!-- Button -->
+                    <div class="form-group pt-5">
+                        <button id="login" name="Entrar" class="btn btn-success col-6">Entrar</button>
 
-.buttonsForm {
-  margin-top: 40px;
-  position: relative;
-  border-radius: 30px;
-  box-shadow: 0 0 7px 0 rgb(255, 255, 255);
-}
-
-.buttonsForm button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  position: relative;
-  padding: 10px 29px;
-}
-
-.btnColor {
-  position: absolute;
-  width: 108px;
-  height: 100%;
-  background: linear-gradient(to right, #e2bd45, rgba(255, 153, 0, 0.849));
-  border-radius: 30px;
-  transition: .3s;
-  color: aliceblue;
-}
-
-input[type="text"], input[type="password"] {
-  border: none;
-  margin-top: 40px;
-  border-radius: 60px;
-  padding: 8px 0 10px 35px;
-  outline: none;
-  width: 100%;
-  border-style: solid;
-}
-
-button[type="submit"] {
-  background: rgb(255, 196, 0);
-  color: rgb(0, 0, 0);
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0 8px 15px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
-}
-
-.divCheck {
-  margin: 10px 0 0 5px;
-  width: 80%;
-  font-size: 13px;
-}
-
-#signin {
-  left: 25px;
-}
-
-#signup {
-  left: 450px;
-}
-
-i {
-  position: absolute;
-  left: 0;
-  padding: 10px 10px;
-}
-
-.iEmail {
-  top: 40px;
-}
-
-.iPassword {
-  top: 114px;
-}
-
-.iPassword2 {
-  top: 190px;
-}
-</style>
-<div class="container0">
-        <div class="buttonsForm">
-            <div class="btnColor"></div>
-            <button id="btnSignin">Sign in</button>
-            <button id="btnSignup">Sign up</button>
-        </div>
-
-        <form id="signin" method="post">
-            <input type="text" placeholder="Email" id="email" required />
-            <i class="fas fa-envelope iEmail"></i>
-            <input type="password" placeholder="Password" id="senha" required />
-            <i class="fas fa-lock iPassword"></i>
-            <div class="divCheck">
-                <input type="checkbox" />
-                <span>Remember Password</span>
+                        <a asp-action="Cadastro" asp-controller="Home" id="btnSignup" name="Inscrever" class="btn btn-outline-secondary col-5 text-black">Inscrever-se</a>
+                    </div>
+                </form>
             </div>
-        <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Login">Inscreva-se</a>
-        </form>
-
-        <form method="post" action="/Home/Validar">
-    <input type="text" id="txtEmail" name="email" placeholder="Email" />
-    <input type="password" id="txtSenha" name="senha" placeholder="Senha" />
-    <button type="submit" class="btn btn-secondary">Inscreva-se</button>
-</form>
+        </div>
     </div>
+</body>
+</html>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-    var formSignin = document.querySelector('#signin')
-    var formSignup = document.querySelector('#signup')
-    var btnColor = document.querySelector('.btnColor')
-
-    document.querySelector('#btnSignin')
-        .addEventListener('click', () => {
-            formSignin.style.left = "25px"
-            formSignup.style.left = "450px"
-            btnColor.style.left = "0px"
-        })
-
-    document.querySelector('#btnSignup')
-        .addEventListener('click', () => {
-            formSignin.style.left = "-450px"
-            formSignup.style.left = "25px"
-            btnColor.style.left = "110px"
-        })
-
-    function Validar() {
-        debugger;
-        let email = document.getElementById("email").value;
-        let senha = document.getElementById("senha").value;
-
-        $.ajax({
-            type: "POST",
-            url: "/Home/Validar",
-            data: { email: email, senha: senha },
-            success: function (data) {
-                console.log("Success")
-            },
-            error: function (xhr, status, error) {
-                console.log("readyState: " + xhr.readyState);
-                console.log("responseText: " + xhr.responseText);
-                console.log("status: " + xhr.status);
-                console.log("text status: " + status);
-                console.log("error: " + error);
-            }
-        });
-    }
-
 </script>

@@ -1,0 +1,67 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    align-items: center;
+    background-image: url('https://extra.globo.com/incoming/22777984-3e7-183/w976h550-PROP/rio-de-janeiro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 darkgrey;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adiciona um fundo com opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    width: 400px;
+}
+
+.btnswitch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .form-group i {
+        position: absolute;
+        top: 55%;
+        left: 10px;
+      
+        color: black;
+    }
+
+.form-control {
+    padding-left: 30px; 
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
