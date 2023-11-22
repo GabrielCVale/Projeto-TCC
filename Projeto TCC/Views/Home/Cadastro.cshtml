@@ -1,8 +1,8 @@
 ﻿<style>
     /* Estilo para o cabeçalho do painel */
     .panel-heading {
-        background-color: #337ab7;
-        color: white;
+        background-color: #337ab7 !important;
+        color: white !important;
     }
 
     /* Estilo para os campos obrigatórios */
@@ -13,42 +13,32 @@
 
     /* Estilo para o botão Cadastrar */
     .btn-success {
-        margin-right: 10px;
+        margin-right: 10px !important;
     }
 
     /* Estilo para o botão Cancelar */
     .btn-danger {
-        margin-left: 10px;
+        margin-left: 10px !important;
     }
 
     /* Estilo para os rótulos de radio (Sexo) */
     .radio-inline {
-        margin-right: 20px;
+        margin-right: 20px !important;
     }
 
-    /* Estilo para o ícone no campo de telefone */
-    .input-group-addon i.glyphicon-earphone {
-        color: #337ab7;
-    }
-
-    /* Estilo para o ícone no campo de e-mail */
-    .input-group-addon i.glyphicon-envelope {
-        color: #337ab7;
+    /* Estilo para o ícone no campo de telefone e e-mail */
+    .input-group-addon i {
+        color: #337ab7 !important;
     }
 
     /* Estilo para os campos de telefone e e-mail */
     .input-group input[type="text"] {
-        border-radius: 0;
-    }
-
-    /* Estilo para o ícone na barra de endereço */
-    .input-group-addon:first-child {
-        border-radius: 0;
+        border-radius: 0 !important;
     }
 
     /* Estilo para o painel */
     .panel {
-        border-radius: 0;
+        border-radius: 0 !important;
     }
 
     /* Estilo para o corpo do formulário */
@@ -58,17 +48,15 @@
 
     /* Estilo para os campos de entrada */
     .form-control {
-        border-radius: 0;
+        border-radius: 0 !important;
     }
 
     /* Estilo para os rótulos dos campos de entrada */
     .control-label {
         font-weight: bold;
     }
-
 </style>
 <form class="form-horizontal" method="post" action="/Home/Cadastrar">
-    <fieldset>
         <div class="panel panel-primary">
             <div class="panel-heading">Cadastro de Cliente</div>
 
@@ -236,7 +224,4 @@
             </div>
 
         </div>
-
-
-    </fieldset>
 </form>

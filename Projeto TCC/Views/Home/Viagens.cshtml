@@ -5,7 +5,7 @@
     {
 
         <div class="col-md-4" style="margin-bottom:1%;" onclick="Card(@item.Id)">
-            <a href="#" onclick="Card(@item.Id)">
+            <a href="#" onclick="Card(@item.Id)" style="text-decoration: none; color: black;">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg text-decoration: none"
                  style="background-image: url('@Html.Raw(item.Imagem)'); background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -29,7 +29,7 @@
                                 </svg>
                                 <small>Valor R$@Html.Raw(item.valor)</small>
                                 <input style="display: none;" class="hidden" id="viagem" value="@item.nomeViagem" />
-                                <input style="display: none;"  class="hidden" id="Contato" value="@item.contato" />
+                                <input style="display: none;"  class="hidden" id="contato" value="@item.contato" />
                             </li>
                         </ul>
                     </div>
@@ -38,14 +38,53 @@
         </div>
     }
 </div>
+<style>
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Estilo para a caixa da modal */
+    .modal-content {
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Estilo para o cabeçalho da modal */
+    .modal-header {
+        background-color: #007bff; /* Cor de fundo azul, pode ser alterada */
+        color: white; /* Cor do texto no cabeçalho */
+        border-bottom: 1px solid #dee2e6; /* Cor da borda inferior */
+    }
+
+    /* Estilo para o corpo da modal */
+    .modal-body {
+        padding: 20px; /* Espaçamento interno do conteúdo */
+    }
+
+    /* Estilo para o botão de fechar */
+    .close {
+        color: white; /* Cor do ícone de fechar */
+    }
+
+    /* Estilo para o botão de Entrar em Contato */
+    #btnWhatsapp {
+        background-color: #28a745; /* Cor de fundo verde, pode ser alterada */
+        color: white; /* Cor do texto no botão */
+        border: none; /* Remove a borda do botão */
+        padding: 10px 20px; /* Espaçamento interno do botão */
+        border-radius: 5px; /* Borda arredondada */
+    }
+
+        /* Estilo para o botão de Entrar em Contato ao passar o mouse */
+        #btnWhatsapp:hover {
+            background-color: #218838; /* Cor de fundo verde escuro ao passar o mouse */
+        }
+</style>
 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="TituloModalCentralizado">Detalhes da Viagem</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 <div class="detalhes"></div>
@@ -69,13 +108,13 @@
 
                 // Obter os valores de viagem e contato
                 var viagem = $("#viagem").val();
-                var contato = $("#Contato").val();
+                var contato = $("#contato").val();
 
                 // Construir a mensagem com os valores
                 var mensagem = encodeURIComponent("Olá, me interessei pela viagem para " + viagem + " que você postou na ExcursOn, poderia me enviar mais informações e fotos?");
 
                 // Configurar o link do botão do WhatsApp
-                $("#btnWhatsapp").attr("onclick", "window.open('https://wa.me/" + contato + "?text=" + mensagem + "')");
+                $("#btnWhatsapp").attr("onclick","window.open('https://wa.me/" + contato + "?text=" + mensagem + "')");
             },
             error: function (xhr, status, error) {
                 console.log("readyState: " + xhr.readyState);

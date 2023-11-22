@@ -10,6 +10,14 @@ namespace Projeto_TCC
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddAuthentication("MyCookieAuthenticationScheme")
+            .AddCookie("MyCookieAuthenticationScheme", config =>
+        {
+        config.Cookie.Name = "MyCookie";
+        config.LoginPath = "/Home/Login";
+        config.AccessDeniedPath = "/Home/Login";
+        });
+
             // Configuração da injeção de dependência do MySqlConnectionHelper
             builder.Services.AddScoped<MySqlConnectionHelper>(provider => new MySqlConnectionHelper(
                 "server=localhost;initial catalog=cadastro;uid=root;")); // Substitua pela sua string de conexão real

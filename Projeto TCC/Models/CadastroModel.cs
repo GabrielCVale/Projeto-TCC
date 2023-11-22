@@ -12,6 +12,7 @@
         public string Hora { get; set; }
         public string data { get; set; }
         public string Imagem { get; set; }
+        public string Nome { get; set; }
 
     }
 }

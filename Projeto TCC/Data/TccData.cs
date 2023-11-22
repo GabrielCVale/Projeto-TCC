@@ -36,7 +36,8 @@ namespace Tcc.Data
                                 Hora = reader["Hora"].ToString(),
                                 data = reader["Data"].ToString(),
                                 Imagem = reader["Imagem"].ToString(),
-                                valor = Convert.ToDecimal(reader["Valor"])
+                                valor = Convert.ToDecimal(reader["Valor"]),
+                                contato = reader["Contato"].ToString()
                             };
 
                             viagens.Add(viagem);
@@ -114,6 +115,40 @@ namespace Tcc.Data
                         command.Parameters.AddWithValue("@Bairro", Bairro);
                         command.Parameters.AddWithValue("@Cidade", Cidade);
                         command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
+
+                        // Execute a inserção
+                        command.ExecuteNonQuery();
+                    }
+
+                    return true; // Retorna true se o cadastro foi bem-sucedido
+                }
+            }
+            catch (Exception ex)
+            {
+                // Logar a exceção ou fazer qualquer tratamento necessário
+                return false; // Retorna false se ocorrer um erro durante o cadastro
+            }
+        }
+
+        public bool ValidaContato(string Nome, string Email, string Mensagem)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    // Use parâmetros para evitar SQL injection
+                    string query = "INSERT INTO ValidaContato (Nome, Email, Mensagem) VALUES" +
+                                   "(@Nome, @Email, @Mensagem)";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        // Adicione parâmetros para a consulta
+                        command.Parameters.AddWithValue("@Nome", Nome);
+                        command.Parameters.AddWithValue("@Email", Email);
+                        command.Parameters.AddWithValue("@Mensagem", Mensagem);
+
 
                         // Execute a inserção
                         command.ExecuteNonQuery();

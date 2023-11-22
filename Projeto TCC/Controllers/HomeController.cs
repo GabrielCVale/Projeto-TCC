@@ -16,7 +16,7 @@ namespace Projeto_TCC.Controllers
         }
         public ActionResult Index()
         {
-            return View("Index");
+           return View("Index");
         }
 
         public ActionResult Login()
@@ -27,6 +27,11 @@ namespace Projeto_TCC.Controllers
         public ActionResult Cadastro()
         {
             return View("Cadastro");
+        }
+
+        public ActionResult Contato()
+        {
+            return View("Contato");
         }
 
         public ActionResult Viagens()
@@ -65,7 +70,7 @@ namespace Projeto_TCC.Controllers
 
             if (Resultado)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", Resultado);
             }
             else
             {
@@ -76,6 +81,20 @@ namespace Projeto_TCC.Controllers
         public ActionResult Cadastrar(string Nome, string DataNacimento, string Email, string Senha,string CPF, string RG, string Sexo, string Telefone, string Endereco, string Bairro, string Cidade, string EstadoCivil)
         {
             var Resultado = _mySqlConnectionHelper.Cadastro(Nome, DataNacimento, Email, Senha, CPF, RG, Sexo, Telefone, Endereco, Bairro, Cidade, EstadoCivil);
+
+            if (Resultado)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Login");
+            }
+        }
+
+        public ActionResult ValidarContato(string Nome,  string Email, string Mensagem)
+        {
+            var Resultado = _mySqlConnectionHelper.ValidaContato(Nome, Email, Mensagem);
 
             if (Resultado)
             {
